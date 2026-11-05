@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081b16"><title>Under the Same Moon</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="star-layer"></div><div class="star-layer slow"></div>
+    <div class="shooting-star"></div><div class="shooting-star second"></div>
+  </div>
+  <main class="shell">
+    <div class="topline"><span>✦</span> A LITTLE SOMETHING FOR YOU <span>✦</span></div>
+
+    <section class="page active" id="page-1">
+      <div class="moon-small">☾</div>
+      <p class="kicker">YOUR VERY OWN LOVE PAYMENT PORTAL</p>
+      <h1><i>a tiny payment is waiting for you</i></h1>
+      <p class="sub"><br>But first, let's make sure it's really you.</p>
+      <form id="pin-form">
+        <label for="pin">INPUT YOUR PIN</label>
+        <input id="pin" type="password" inputmode="numeric" maxlength="8" placeholder="DDMMYYYY" autocomplete="off" required>
+        <p class="hint">*Tanggal/hari pertama kita berkomunikasi dan berkenalan</p>
+        <p id="pin-error" class="error" role="alert"></p>
+        <button class="primary" type="submit">Verify payment </button>
+      </form>
+      <p class="footnote">No money needed. Just a little curiosity.</p>
+    </section>
+
+    <section class="page" id="page-2">
+      <div class="success-seal">✓</div><p class="kicker">TRANSACTION COMPLETE</p>
+      <h2>Payment<br><i>successful!</i></h2>
+      <p class="sub">Your payment has been received<br>and your heart has been credited.</p>
+      <div class="receipt">
+        <div><small>PAYMENT FOR</small><b>being wonderfully you</b></div>
+        <div><small>AMOUNT</small><b>infinity hugs + endless love</b></div>
+        <div><small>PAYMENT METHOD</small><b>from my heart ❤️</b></div>
+        <div><small>STATUS</small><b class="paid">PAID IN FULL </b></div>
+      </div>
+      <button class="primary" data-next="3">Collect your surprise </button>
+      <p class="footnote">This receipt is valid for a lifetime.</p>
+    </section>
+
+    <section class="page universe-page" id="page-3">
+      <p class="kicker">A LITTLE UNIVERSE, JUST FOR YOU</p>
+      <div class="cosmos" aria-label="Moon, Taurus constellation and a little squid">
+        <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="moon-glow"><span>☾</span></div>
+        <span class="squid-float squid-one" aria-hidden="true">🦑</span>
+        <span class="squid-float squid-two" aria-hidden="true">🦑</span>
+        <span class="squid-float squid-three" aria-hidden="true">🦑</span>
+        <span class="squid-float squid-four" aria-hidden="true">🦑</span><span class="tiny-spark spark-a">✦</span><span class="tiny-spark spark-b">✧</span>
+      </div>
+      <h2>somewhere in<br>this <i>universe …</i></h2>
+      <p class="story">There is one person I’m endlessly grateful the universe let me meet. And somehow, that person is you.</p>
+      <p class="story muted">under the same moon, let's explore the memories we've made together!</p>
+      <button class="primary" data-next="4">Open our memories </button>
+      <p class="footnote">♫ A song for you begins here.</p>
+    </section>
+
+    <section class="page gallery-page" id="page-4">
+      <p class="kicker">OUR LITTLE COLLECTION</p>
+      <h2>Little moments,<br><i>big feelings.</i></h2>
+      <p class="sub">A little universe made of moments we want to hold on.</p>
+      <div class="gallery" id="gallery"></div>
+      <p class="footnote">Tap any photo to see it closer.</p>
+      <button class="primary" data-next="5">One last thing …</button>
+    </section>
+
+    <section class="page final-page" id="page-5">
+      <div class="final-moon">☾</div><p class="kicker">A NOTE FROM ME TO YOU</p>
+      <h2>Please take<br><i>good care.</i></h2>
+      <article class="message" id="typed-message" aria-live="polite" >
+        <p class="type-line" data-text="Jangan lupa jaga kesehatan, ya. Semoga kamu selalu diberi tubuh yang kuat, hati yang tenang, dan hari-hari yang dipenuhi hal baik."></p>
+        <p class="type-line" data-text="Semoga rezekimu selalu dilancarkan dan dilimpahkan. Rezeki apapun itu, baik rezeki berupa uang, kesempatan baik, dan segala hal yang kamu butuhkan juga yang kamu inginkan. Semoga setiap urusan dimudahkan, setiap langkah menemukan jalannya, dan setiap usaha berbuah sesuatu yang indah."></p>
+        <p class="type-line" data-text="Di mana pun kamu berada dan ke mana pun langkahmu pergi, insyaAllah doa-doaku akan selalu mengiringimu. Semoga dunia memperlakukanmu dengan sangat baik, sebagaimana kamu pantas mendapatkannya."></p>
+        <p class="signature type-line" data-text="With all my love, always ♡"></p>
+      </article>
+      <button class="quiet-button" id="replay">↻    Start again</button>
+      <p class="footnote">dibuat oleh wanita mungil yang kamu panggil Bidadari ♡</p>
+    </section>
+    <div class="progress" aria-hidden="true"><span id="progress-bar"></span></div>
+  </main>
+
+  <audio id="bg-music" src="assets/music.mp3" preload="auto" loop></audio>
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button id="lightbox-close" aria-label="Close photo">×</button>
+    <button id="photo-prev" class="photo-nav" aria-label="Previous photo">‹</button>
+    <div class="lightbox-content">
+      <img id="lightbox-image" alt="A memory of us">
+      <p id="lightbox-caption" class="lightbox-caption"></p>
+    </div>
+    <button id="photo-next" class="photo-nav" aria-label="Next photo">›</button>
+    <p id="photo-count"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
